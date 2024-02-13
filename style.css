@@ -1,0 +1,53 @@
+.book-card{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    width:500px;
+    background-color:rgba(0, 0, 0, 0.726)
+}
+
+
+.btn-display{
+    height: 100px;
+    width: 200px;
+    margin-top: 5px;
+}
+
+.card{
+    margin-top: 5px;
+    display: flex;
+    
+}
+
+
+dialog{
+    height: 500px;
+    width:500px;
+}
+
+span{
+    margin-bottom: 50px;
+}
+
+.add-book-btn{
+
+}
+
+
+
+::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    );
+    opacity: 0.75;
+  }
