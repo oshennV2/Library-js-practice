@@ -1,7 +1,8 @@
 const myLibrary =[]
 const display = document.querySelector(".display")
 const div = document.createElement("div")
-
+const removeBtn = document.createElement("button")
+let id = 0 
 
 function book(name , author, pages, read,){
     this.name = name
@@ -12,19 +13,26 @@ function book(name , author, pages, read,){
 
 function addBookToLibrary(name, author, pages, read) {
     const newBook = new book(name, author, pages, read);
-    myLibrary.push(newBook);
-}
-function displayBook(){
+    myLibrary.push(newBook);}
 
-    if (myLibrary.length > 1) {
-        display.innerHTML =""
+var generateId = (function(n) {
+    return function() {
+      id+= 1;
+      console.log(id)
+      return id;
     }
+  }(0));
+
+
+function displayBook(){
 
     for (let index = 0; index < myLibrary.length; index++) {
         
         const book = myLibrary[index]
 
         const div = document.createElement("div")
+        const removeBtn = document.createElement("button")
+
 
         div.classList.add("card")
         div.style.height = "100px"
@@ -36,11 +44,25 @@ function displayBook(){
         Pages:${book.pages}
         Read:${book.read}
         `
+
+        div.setAttribute("data-index-number",generateId())
+
+        removeBtn.textContent="Remove"
+        removeBtn.addEventListener("click", function(){
+            // Retrieve the data index number from the element
+            
+                display.removeChild(div);
+               
+            
+        });
+        
+        
+
+        div.appendChild(removeBtn)
         display.appendChild(div)
 
     }
 }
-
 
 
 const newBtn = document.querySelector(".new-book-btn")
@@ -86,7 +108,6 @@ inputAuthor.value=""
 inputName.value=""
 inputPages.value=""
 
-
 dialog.close()
 
 })
@@ -96,4 +117,9 @@ const clearBtn = document.querySelector(".clear-display")
 
 clearBtn.addEventListener("click", function(){
     display.innerHTML=""
+    myLibrary.length = 0
 })
+
+
+
+
