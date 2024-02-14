@@ -1,15 +1,59 @@
-.book-card{
-    height: 200px;
-    width: 200px;
-    background-color: red;
+body{
+    margin:0;
+    padding:0;
 }
 
+.grid-wrap{
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+
+}
+
+h1{
+    color: white;
+    font-family: sans-serif;
+    margin-left:7px
+}
+
+header{
+background-color: rgb(48, 47, 47);
+}
+
+.new-book-btn{
+    border-radius: 18px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.new-book-btn:hover {
+    background-color: #45a049;
+  }
+
+
+
+.clear-display{
+    border-radius: 18px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+
+}
+.clear-display:hover {
+    background-color: #e21717;
+  }
+
+
 .display{
-    display: flex;
-    flex-wrap: wrap;
-    height: 500px;
-    width:500px;
-    background-color:rgba(0, 0, 0, 0.726)
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
+   grid-template-rows: 1fr 1fr 1fr 1fr ;
+   background-color: rgb(240, 240, 240);
 }
 
 
@@ -19,27 +63,36 @@
     margin-top: 5px;
 }
 
+
 .card{
-    margin-top: 5px;
     display: flex;
-    
+    flex-direction: column;
+    width: 210px;
+    height: 130px;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    background-color: green;
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #888888;
 }
 
 
-dialog{
-    height: 500px;
-    width:500px;
-}
 
 span{
     margin-bottom: 50px;
 }
 
-.add-book-btn{
 
+ul{
+    display:flex;
 }
 
-
+dialog{
+    height: 500px;
+    width:500px;
+}
 
 ::backdrop {
     background-image: linear-gradient(

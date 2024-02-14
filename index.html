@@ -9,6 +9,15 @@
 
 <body>
 
+    <div class="grid-wrap">
+        <header>
+            <h1>MyLibrary</h1>
+            <button class="new-book-btn">New Book</button>
+            <button class="clear-display">Clear Library</button>
+        
+        </header>
+
+
     <div class="display">
 
     </div>
@@ -16,15 +25,15 @@
     <dialog>
         <form>
             <label for = "book-name">Book Name</label>
-            <input type="text" name="book-name" id="book-name">
+            <input type="text" name="book-name" id="book-name" required minlength="3"> 
             <br>
 
             <label for="author-name">Author Name</label>
-            <input type="text" name="author-name" id="author-name">
+            <input type="text" name="author-name" id="author-name" required minlength="3">
             <br>
 
             <label for="pages">Number Of Pages</label>
-            <input type="number" name="pages" id="pages">
+            <input type="number" name="pages" id="pages" required min="2">
             <br>
 
             <label for="yes" for="no">Have you read this or not</label>
@@ -42,10 +51,8 @@
 
     </dialog>
 
-    <button class="new-book-btn">New Book</button>
-    <button class="clear-display">Clear Library</button>
-
-
+   
+</div>
 
 
     <script src="app.js"></script>
